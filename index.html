@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Famicom - Donkey Kong Country 3</title>
+    <style>
+        body {
+            background-color: #0b130e; /* Fondo oscuro verdoso tipo selva */
+            color: #e2f0d9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            margin-bottom: 5px;
+            color: #8bc34a; /* Verde brillante */
+            text-shadow: 2px 2px #1b5e20;
+            font-size: 28px;
+            text-align: center;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #a5d6a7;
+            font-size: 14px;
+            text-align: center;
+        }
+        /* Contenedor del juego en proporción 4:3 */
+        .emulador-container {
+            width: 640px;
+            height: 480px;
+            max-width: 100%;
+            background-color: #000;
+            border: 4px solid #2e7d32; /* Borde verde selva */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+        }
+        #game {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Donkey Kong Country 3 - Super Famicom</h1>
+    <p>Cargando archivo: ddky3.zip</p>
+
+    <!-- Contenedor donde se cargará el juego -->
+    <div class="emulador-container">
+        <div id="game"></div>
+    </div>
+
+    <!-- Script de configuración de EmulatorJS -->
+    <script>
+        EJS_player = '#game';
+        EJS_biosUrl = ''; 
+        EJS_gameUrl = 'ddky3.zip'; // Usa exactamente el nombre del zip que subiste
+        EJS_core = 'snes'; 
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/'; 
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
